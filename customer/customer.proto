@@ -10,6 +10,7 @@ service CustomerService{
     rpc UpdateCustomer(Customer) returns (Customer);
     rpc GetByUsername(byUsername) returns (Customer);
     rpc CheckField(CheckFieldReq) returns (CheckFieldRes);
+    rpc GetByEmail(LoginReq) returns (Customer);
 }
 
 message CustomerRequest{
@@ -24,7 +25,7 @@ message CustomerRequest{
     int64 updated_at = 10;
     int64 deleted_at = 11;
     string refresh_token = 12;
-    
+
 }
 
 message Customer {
@@ -90,4 +91,8 @@ message CheckFieldRes {
 message CheckFieldReq {
     string field = 1;
     string value = 2;
+}
+
+message LoginReq {
+    string email = 1;
 }
