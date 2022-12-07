@@ -23,6 +23,8 @@ message CustomerRequest{
     int64 created_at = 9;
     int64 updated_at = 10;
     int64 deleted_at = 11;
+    string refresh_token = 12;
+    
 }
 
 message Customer {
