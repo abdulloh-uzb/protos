@@ -37,6 +37,7 @@ message GetPostResponse {
     repeated Customer customer_info = 7;
     repeated Ranking rankings = 8;
     string message = 9;
+    string customer_id = 10;
 }
 message Posts {
     repeated Post posts = 1;
