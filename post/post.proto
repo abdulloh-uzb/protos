@@ -8,6 +8,7 @@ service PostService{
     rpc DeletePost(Id) returns (Empty);
     rpc ListPost(Empty) returns (Posts);
     rpc GetPostByCustomerId (Id) returns (Posts);
+    rpc DeleteByCustomerId(Id) returns(Empty);
 }
 
 message Post {
