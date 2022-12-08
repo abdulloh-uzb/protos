@@ -11,6 +11,7 @@ service CustomerService{
     rpc GetByUsername(byUsername) returns (Customer);
     rpc CheckField(CheckFieldReq) returns (CheckFieldRes);
     rpc GetByEmail(LoginReq) returns (Customer);
+    rpc GetAdminByEmail(GetAdminReq) returns (Admin);
 }
 
 message CustomerRequest{
@@ -95,4 +96,18 @@ message CheckFieldReq {
 
 message LoginReq {
     string email = 1;
+}
+
+message GetAdminReq{
+    string email = 1;
+    string password = 2;
+}
+
+message Admin {
+    int64 id = 1;
+    string email = 2;
+    string username = 3;
+    string password = 4;
+    string access_token = 5;
+    string refresh_token = 6;   
 }
